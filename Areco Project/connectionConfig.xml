@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<ConnectionInfo>
-  <DriverName>PG</DriverName>
-  <Database>postgres</Database>
-  <Server>localhost</Server>
-  <Port>5432</Port>
-</ConnectionInfo>
