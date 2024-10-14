@@ -21,7 +21,6 @@ type
     Panel3: TPanel;
     btnSettings: TSpeedButton;
     btnExit: TSpeedButton;
-    FDPhysPgDriverLink1: TFDPhysPgDriverLink;
     pnlRegister: TPanel;
     btnReg: TSpeedButton;
     Panel1: TPanel;
@@ -33,18 +32,22 @@ type
     btnEdit: TSpeedButton;
     pnlRegisterSub: TPanel;
     btnProducts: TSpeedButton;
+    Label1: TLabel;
     procedure btnExitClick(Sender: TObject);
     procedure btnRegClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
     procedure btnProductsClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
     procedure tableAction(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormDestroy(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure btnSettingsClick(Sender: TObject);
   private
     tableQuery: TFDQuery;
     dsQuery: TDataSource;
     tableSel: String;
-    procedure configQuery;
-
+    procedure queryConfig;
   public
     mainConnection: TFDConnection;
   end;
@@ -54,7 +57,7 @@ var
 
 implementation
 
-uses uRegister;
+uses uConfigDb, uRegister;
 
 {$R *.dfm}
 
@@ -74,39 +77,40 @@ begin
 
 end;
 
-procedure TfrmMain.FormCreate(Sender: TObject);
-var
-  loginDialog: TFDGUIxLoginDialog;
+procedure TfrmMain.btnSettingsClick(Sender: TObject);
 begin
+  if not assigned(frmConfigDb) then
+    frmConfigDb := TFrmConfigDb.Create(Self);
 
-  // Configure database access
-  loginDialog := TFDGUIxLoginDialog.Create(self);
+  frmConfigDb.ShowModal;
+end;
 
-  try
-    mainConnection := TFDConnection.Create(self);
+procedure TfrmMain.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
+end;
 
-    mainConnection.DriverName := 'PG';
-    mainConnection.Params.Values['Database'] := 'dbArcoProject';
-    mainConnection.Params.Values['User_Name'] := 'vbmonteiro';
-    mainConnection.Params.Values['Password'] := '260118';
-    mainConnection.Params.Values['Server'] := 'localhost';
-    mainConnection.Params.Values['Port'] := '5432';
-    mainConnection.Connected := True;
-  except
-    on e: Exception do
-    begin
-      ShowMessage('Error to acess the system, please contact our support!');
-      Abort;
-    end;
+procedure TfrmMain.FormCreate(Sender: TObject);
+begin
+  mainConnection := TFDConnection.Create(Self);
 
-  end;
+  frmConfigDb := TFrmConfigDb.Create(Self);
 
+end;
+
+procedure TfrmMain.FormDestroy(Sender: TObject);
+begin
+  frmMain := nil;
+end;
+
+procedure TfrmMain.FormShow(Sender: TObject);
+begin
   // Create Query that connect with the main table
-  tableQuery := TFDQuery.Create(self);
+  tableQuery := TFDQuery.Create(Self);
 
   tableQuery.connection := mainConnection;
 
-  dsQuery := TDataSource.Create(self);
+  dsQuery := TDataSource.Create(Self);
   dsQuery.DataSet := tableQuery;
 
   grdItens.DataSource := dsQuery;
@@ -121,7 +125,7 @@ begin
   tag := TSpeedButton(Sender).tag;
 
   if not assigned(frmRegister) then
-    frmRegister := TFrmRegister.Create(self);
+    frmRegister := TFrmRegister.Create(Self);
 
   frmRegister.tableName := tableSel;
 
@@ -170,7 +174,7 @@ begin
 
 end;
 
-procedure TfrmMain.configQuery;
+procedure TfrmMain.queryConfig;
 begin
   tableQuery.Close;
 
@@ -183,8 +187,8 @@ end;
 
 procedure TfrmMain.btnProductsClick(Sender: TObject);
 begin
-  tableSel := 'productReg';
-  configQuery;
+  tableSel := 'productreg';
+  queryConfig;
 end;
 
 end.

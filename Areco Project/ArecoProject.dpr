@@ -4,7 +4,8 @@ uses
   Vcl.Forms,
   uMain in 'uMain.pas' {frmMain},
   uRegister in 'uRegister.pas' {frmRegister},
-  uDBConnection in 'uDBConnection.pas';
+  uDBConnection in 'uDBConnection.pas',
+  uConfigDb in 'uConfigDb.pas' {frmConfigDb};
 
 {$R *.res}
 

@@ -13,7 +13,10 @@ object frmMain: TfrmMain
   Font.Style = []
   Position = poScreenCenter
   WindowState = wsMaximized
+  OnClose = FormClose
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
   TextHeight = 15
   object Panel2: TPanel
     Left = 185
@@ -320,6 +323,7 @@ object frmMain: TfrmMain
       Font.Name = 'Arial'
       Font.Style = [fsBold]
       ParentFont = False
+      OnClick = btnSettingsClick
       ExplicitTop = 146
     end
     object btnExit: TSpeedButton
@@ -404,15 +408,29 @@ object frmMain: TfrmMain
     Width = 1310
     Height = 54
     Align = alTop
-    Color = clWhite
+    BevelOuter = bvNone
+    Color = 5127990
     ParentBackground = False
     TabOrder = 2
-  end
-  object FDPhysPgDriverLink1: TFDPhysPgDriverLink
-    VendorHome = 
-      'C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\E' +
-      'RP Arco'
-    Left = 80
-    Top = 136
+    object Label1: TLabel
+      Left = 0
+      Top = 0
+      Width = 1310
+      Height = 54
+      Align = alClient
+      Alignment = taCenter
+      Caption = 'Developed by Vinicius Monteiro'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Layout = tlCenter
+      ExplicitLeft = 1120
+      ExplicitTop = 19
+      ExplicitWidth = 177
+      ExplicitHeight = 15
+    end
   end
 end
