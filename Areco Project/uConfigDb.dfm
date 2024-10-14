@@ -34,7 +34,7 @@ object frmConfigDb: TfrmConfigDb
       EditLabel.Height = 15
       EditLabel.Caption = 'Database'
       TabOrder = 0
-      Text = 'dbAreco'
+      Text = 'postgres'
     end
     object edtServer: TLabeledEdit
       Left = 16
