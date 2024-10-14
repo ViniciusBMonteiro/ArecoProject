@@ -1,0 +1,646 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'Cadastro de Produtos'
+  ClientHeight = 724
+  ClientWidth = 1310
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  TextHeight = 15
+  object Panel2: TPanel
+    Left = 185
+    Top = 54
+    Width = 1125
+    Height = 670
+    Align = alClient
+    BevelOuter = bvNone
+    Color = 15921906
+    Padding.Left = 30
+    Padding.Top = 30
+    Padding.Right = 30
+    Padding.Bottom = 30
+    ParentBackground = False
+    TabOrder = 0
+    object lblTitle: TLabel
+      Left = 30
+      Top = 30
+      Width = 1065
+      Height = 30
+      Align = alTop
+      Caption = 'Products'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 6118749
+      Font.Height = -21
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      Font.Quality = fqClearType
+      ParentFont = False
+      ExplicitWidth = 87
+    end
+    object grdItens: TDBGrid
+      Left = 30
+      Top = 95
+      Width = 1065
+      Height = 545
+      Align = alClient
+      BiDiMode = bdLeftToRight
+      ParentBiDiMode = False
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -12
+      TitleFont.Name = 'Segoe UI'
+      TitleFont.Style = []
+    end
+    object Panel5: TPanel
+      Left = 30
+      Top = 60
+      Width = 1065
+      Height = 35
+      Align = alTop
+      BevelOuter = bvNone
+      Color = clWhite
+      ParentBackground = False
+      TabOrder = 1
+      object btnDelete: TSpeedButton
+        Left = 1025
+        Top = 0
+        Width = 40
+        Height = 35
+        Hint = 'Delete'
+        Align = alRight
+        Flat = True
+        Glyph.Data = {
+          F6060000424DF606000000000000360000002800000018000000180000000100
+          180000000000C0060000C40E0000C40E00000000000000000000FFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDFBFCDDA1B7CE
+          7797CD7595CD7595CD7595CD7595CD7595CD7595CD7595CD7595CE7797DDA2B7
+          FEFBFCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFEBC9D5CD7595CD7595CD7595CD7595CD7595CD7595CD7595CD7595CD7595CD
+          7595CD7595CD7595ECCAD6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFE6BACACD7595CA7191C46A8ACD7595CD7595C46A8AC46A
+          8ACD7595CD7595C46A8ACA7191CD7595E6BACAFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE6BACACD7595C16585B35475CD7595
+          CD7595B35475B35475CD7595CD7595B35475C16585CD7595E6BACAFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE6BACACD7595C0
+          6484B35474CD7595CD7595B35474B35474CD7595CD7595B35474C06484CD7595
+          E6BACAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFE6BACACD7595C06484B35474CD7595CD7595B35474B35474CD7595CD7595B3
+          5474C06484CD7595E6BACAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFE6BACACD7595C06484B35474CD7595CD7595B35474B354
+          74CD7595CD7595B35474C06484CD7595E6BACAFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE6BACACD7595C06484B35474CD7595
+          CD7595B35474B35474CD7595CD7595B35474C06484CD7595E6BACAFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE6BACACD7595C0
+          6484B35474CD7595CD7595B35474B35474CD7595CD7595B35474C06484CD7595
+          E6BACAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFE6BACACD7595C06484B35474CD7595CD7595B35474B35474CD7595CD7595B3
+          5474C06484CD7595E6BACAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFE6BACACD7595C06484B35474CD7595CD7595B35474B354
+          74CD7595CD7595B35474C06484CD7595E6BACAFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE6BACACD7595C06484B35474CD7595
+          CD7595B35474B35474CD7595CD7595B35474C06484CD7595E6BACAFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE6BACACD7595C1
+          6585B35475CD7595CD7595B35475B35475CD7595CD7595B35475C16585CD7595
+          E6BACAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFE6BACACD7595CA7191C46A8ACD7595CD7595C36989C46989CD7595CD7595C4
+          6A8ACA7191CD7595E6BACAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFE6BACACD7595CD7595CD7595CD7595CD7595CD7595CD75
+          95CD7595CD7595CD7595CD7595CD7595E6BACAFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE6BACACD7595CD7595CD7595CD7595
+          CD7595CD7595CD7595CD7595CD7595CD7595CD7595CD7595E6BACAFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEDCED9DB9DB3DB9DB3DB
+          9DB3DB9DB3DB9DB3DB9DB3DB9DB3DB9DB3DB9DB3DB9DB3DB9DB3DB9DB3DB9DB3
+          DB9DB3EDCED9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5E3
+          E9DCA1B6DB9DB3DB9DB3DB9DB3DB9DB3DB9DB3DB9DB3DB9DB3DB9DB3DB9DB3DB
+          9DB3DB9DB3DB9DB3DDA1B6F5E3EAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE8BFCECD7595CD7595CD75
+          95CD7595E8BFCEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        ParentShowHint = False
+        ShowHint = True
+        OnClick = btnDeleteClick
+        ExplicitTop = -6
+      end
+      object btnNew: TSpeedButton
+        Tag = 1
+        Left = 0
+        Top = 0
+        Width = 40
+        Height = 35
+        Hint = 'New'
+        Align = alLeft
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        Glyph.Data = {
+          F6060000424DF606000000000000360000002800000018000000180000000100
+          180000000000C0060000C40E0000C40E00000000000000000000FFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDEF0DD
+          C0E2BEB1DBAFB1DBAFC0E2BEDFF1DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9FCF9AC
+          D9AA65B96250AF4C50AF4C50AF4C50AF4C50AF4C50AF4C66B962ADDAABFAFCF9
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFD8EDD765B96250AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50
+          AF4C50AF4C67B963DAEED9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFC3E4C255B15150AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF
+          4C50AF4C50AF4C50AF4C50AF4C50AF4C55B252C5E4C3FFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFDCEFDB57B25350AF4C50AF4C50AF4C50AF4C50AF4C
+          50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C57B253DDEF
+          DCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9FCF963B75F50AF4C50AF4C50AF4C50
+          AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C
+          50AF4C50AF4C65B861FAFCF9FFFFFFFFFFFFFFFFFFFFFFFFADDAAB50AF4C50AF
+          4C50AF4C50AF4C50AF4C50AF4C50AF4CA8D7A6FFFFFFFFFFFFA8D7A650AF4C50
+          AF4C50AF4C50AF4C50AF4C50AF4C50AF4CAFDBAEFFFFFFFFFFFFFFFFFFFFFFFF
+          6ABB6750AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4CA8D7A6FFFFFFFFFF
+          FFA8D7A650AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C6BBC68FFFFFFFF
+          FFFFFFFFFFE1F1E050AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C
+          A8D7A6FFFFFFFFFFFFA8D7A650AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF
+          4C50AF4CE3F2E2FFFFFFFFFFFFC1E3C050AF4C50AF4C50AF4C50AF4C50AF4CA8
+          D7A6A8D7A6A8D7A6D4EBD3FFFFFFFFFFFFD4EBD3A8D7A6A8D7A6A8D7A650AF4C
+          50AF4C50AF4C50AF4C50AF4CC3E4C2FFFFFFFFFFFFAFDBAE50AF4C50AF4C50AF
+          4C50AF4C50AF4CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFF50AF4C50AF4C50AF4C50AF4C50AF4CB0DBAEFFFFFFFFFFFFAFDBAE
+          50AF4C50AF4C50AF4C50AF4C50AF4CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFF50AF4C50AF4C50AF4C50AF4C50AF4CB0DBAEFF
+          FFFFFFFFFFC1E2BF50AF4C50AF4C50AF4C50AF4C50AF4CA8D7A6A8D7A6A8D7A6
+          D4EBD3FFFFFFFFFFFFD4EBD3A8D7A6A8D7A6A8D7A650AF4C50AF4C50AF4C50AF
+          4C50AF4CC2E3C1FFFFFFFFFFFFE1F1E050AF4C50AF4C50AF4C50AF4C50AF4C50
+          AF4C50AF4C50AF4CA8D7A6FFFFFFFFFFFFA8D7A650AF4C50AF4C50AF4C50AF4C
+          50AF4C50AF4C50AF4C50AF4CE3F2E2FFFFFFFFFFFFFFFFFF65B96250AF4C50AF
+          4C50AF4C50AF4C50AF4C50AF4C50AF4CA8D7A6FFFFFFFFFFFFA8D7A650AF4C50
+          AF4C50AF4C50AF4C50AF4C50AF4C50AF4C67BA64FFFFFFFFFFFFFFFFFFFFFFFF
+          ADDAAB50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4CA8D7A6FFFFFFFFFF
+          FFA8D7A650AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4CAFDBAEFFFFFFFF
+          FFFFFFFFFFFFFFFFF9FCF963B75F50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C
+          50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C65B8
+          61FAFCF9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD1EAD053B04F50AF4C50AF4C50
+          AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C
+          50AF4C53B150D2EBD1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC3E4
+          C255B15150AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50AF4C50
+          AF4C50AF4C50AF4C55B252C5E4C3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFD8EDD765B96250AF4C50AF4C50AF4C50AF4C50AF4C50AF
+          4C50AF4C50AF4C50AF4C50AF4C67B963DAEED9FFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9FCF9ACD9AA65B96250AF4C
+          50AF4C50AF4C50AF4C50AF4C50AF4C66B962ADDAABFAFCF9FFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFDEF0DDC0E2BEB1DBAFB1DBAFC0E2BEDFF1DFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        OnClick = tableAction
+        ExplicitLeft = -6
+        ExplicitTop = -6
+      end
+      object btnEdit: TSpeedButton
+        Tag = 2
+        Left = 40
+        Top = 0
+        Width = 40
+        Height = 35
+        Hint = 'Edit'
+        Align = alLeft
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        Glyph.Data = {
+          F6060000424DF606000000000000360000002800000018000000180000000100
+          180000000000C0060000C40E0000C40E00000000000000000000FFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D777266898A92B6BDE1ECEEFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF678D8F645A45605E
+          4C1EA7D030CBFF72DCFFB4ECFFF2FCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          92BAC1605E4C1FA6CF07C1FF07C1FF07C1FF20C6FF3CB5FFE1F3FFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFE2EFF31EA9D307C1FF07C1FF07C1FF20C7FF1EA9FF0098FF
+          22A6FFE1F3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF37CDFF07C1FF07C1FF20C7FF1E
+          A9FF0098FF0098FF0098FF22A6FFE2F3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF79DDFF07C1
+          FF1FC7FF1FA9FF0098FF0098FF0098FF0098FF0098FF23A6FFE2F3FFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFBAEEFF1FC7FF1FAAFF0098FF0098FF0098FF0098FF0098FF0098FF0098
+          FF23A6FFE2F3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFF6FDFF35B2FF0098FF0098FF0098FF0098FF0098FF
+          0098FF0098FF0098FF0098FF1DA4FFDCF1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD5EEFF17A1FF0098FF00
+          98FF0098FF0098FF0098FF0098FF0098FF0098FF0098FF23A6FFE2F3FFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFD5EEFF17A1FF0098FF0098FF0098FF0098FF0098FF0098FF0098FF0098FF00
+          98FF23A6FFE2F3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFD5EEFF17A1FF0098FF0098FF0098FF0098FF0098
+          FF0098FF0098FF0098FF0098FF23A6FFE2F3FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD5EEFF17A1FF0098FF
+          0098FF0098FF0098FF0098FF0098FF0098FF0098FF0098FF23A6FFE2F3FFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFD4EEFF17A1FF0098FF0098FF0098FF0098FF0098FF0098FF0098FF0098FF
+          0098FF23A6FFE2F3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFD4EEFF17A1FF0098FF0098FF0098FF0098FF00
+          98FF0098FF0098FF0098FF0098FF23A6FFE2F3FFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDCF1FF1CA3FF0098
+          FF0098FF0098FF0098FF0098FF0098FF0098FF0098FF0098FF3CB0FFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFD4EEFF16A1FF0098FF0098FF0098FF0098FF0098FF0098FF0098FF17A1
+          FFD5EEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFD4EEFF16A1FF0098FF0098FF0098FF0098FF
+          0098FF17A1FFD5EEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD4EEFF16A1FF00
+          98FF0098FF0098FF17A1FFD5EEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFD4EEFF16A1FF0098FF16A1FFD4EEFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD4EEFF2CAAFFD4EEFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        OnClick = tableAction
+      end
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 54
+    Width = 185
+    Height = 670
+    Align = alLeft
+    BevelOuter = bvNone
+    Color = 5127990
+    ParentBackground = False
+    TabOrder = 1
+    object btnSettings: TSpeedButton
+      Left = 0
+      Top = 105
+      Width = 185
+      Height = 35
+      Align = alTop
+      Caption = 'Settings'
+      Flat = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitTop = 146
+    end
+    object btnExit: TSpeedButton
+      Left = 0
+      Top = 140
+      Width = 185
+      Height = 35
+      Align = alTop
+      Caption = 'Sair'
+      Flat = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = btnExitClick
+      ExplicitLeft = -6
+      ExplicitTop = 216
+    end
+    object pnlRegisterSub: TPanel
+      Left = 0
+      Top = 35
+      Width = 185
+      Height = 70
+      Align = alTop
+      BevelOuter = bvNone
+      Color = 8940894
+      ParentBackground = False
+      TabOrder = 0
+      object btnSuppliers: TSpeedButton
+        Left = 0
+        Top = 35
+        Width = 185
+        Height = 35
+        Align = alTop
+        Caption = 'Suppliers'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnSuppliersClick
+        ExplicitTop = 8
+      end
+      object btnProducts: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 185
+        Height = 35
+        Align = alTop
+        Caption = 'Products'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnProductsClick
+        ExplicitTop = -5
+      end
+    end
+    object pnlRegister: TPanel
+      Left = 0
+      Top = 0
+      Width = 185
+      Height = 35
+      Align = alTop
+      BevelOuter = bvNone
+      Color = 5127990
+      ParentBackground = False
+      TabOrder = 1
+      object btnReg: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 185
+        Height = 35
+        Align = alTop
+        Caption = 'Register'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnRegClick
+        ExplicitLeft = -6
+        ExplicitTop = -6
+      end
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1310
+    Height = 54
+    Align = alTop
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 2
+  end
+  object FDPhysPgDriverLink1: TFDPhysPgDriverLink
+    VendorHome = 
+      'C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\E' +
+      'RP Arco'
+    Left = 80
+    Top = 136
+  end
+  object supplierReg: TFDTable
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'supplierreg'
+    Left = 816
+    Top = 216
+    object supplierRegname: TWideStringField
+      DisplayLabel = 'Name'
+      FieldName = 'name'
+      Origin = 'name'
+      Size = 100
+    end
+    object supplierRegaddress: TWideStringField
+      DisplayLabel = 'Address'
+      FieldName = 'address'
+      Origin = 'address'
+      Size = 200
+    end
+    object supplierRegcomplement: TWideStringField
+      DisplayLabel = 'Complement'
+      FieldName = 'complement'
+      Origin = 'complement'
+      Size = 100
+    end
+    object supplierRegneighborhood: TWideStringField
+      DisplayLabel = 'Neighborhood'
+      FieldName = 'neighborhood'
+      Origin = 'neighborhood'
+      Size = 50
+    end
+    object supplierRegcity: TWideStringField
+      DisplayLabel = 'City'
+      FieldName = 'city'
+      Origin = 'city'
+      Size = 50
+    end
+    object supplierRegstate: TWideStringField
+      DisplayLabel = 'State'
+      FieldName = 'state'
+      Origin = 'state'
+      Size = 50
+    end
+    object supplierRegcountry: TWideStringField
+      DisplayLabel = 'Country'
+      FieldName = 'country'
+      Origin = 'country'
+      Size = 50
+    end
+    object supplierRegzipCode: TWideStringField
+      DisplayLabel = 'Zip Code'
+      FieldName = 'zipCode'
+      Origin = '"zipCode"'
+      Size = 50
+    end
+  end
+  object dsSupplierReg: TDataSource
+    DataSet = supplierReg
+    Left = 899
+    Top = 216
+  end
+  object branchReg: TFDTable
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'branchreg'
+    Left = 816
+    Top = 272
+    object branchRegname: TWideStringField
+      DisplayLabel = 'Name'
+      FieldName = 'name'
+      Origin = 'name'
+      Size = 100
+    end
+    object branchRegaddress: TWideStringField
+      DisplayLabel = 'Address'
+      FieldName = 'address'
+      Origin = 'address'
+      Size = 200
+    end
+    object branchRegcomplement: TWideStringField
+      DisplayLabel = 'Complement'
+      FieldName = 'complement'
+      Origin = 'complement'
+      Size = 100
+    end
+    object branchRegneighborhood: TWideStringField
+      DisplayLabel = 'Neighborhood'
+      FieldName = 'neighborhood'
+      Origin = 'neighborhood'
+      Size = 50
+    end
+    object branchRegcity: TWideStringField
+      DisplayLabel = 'City'
+      FieldName = 'city'
+      Origin = 'city'
+      Size = 50
+    end
+    object branchRegstate: TWideStringField
+      DisplayLabel = 'State'
+      FieldName = 'state'
+      Origin = 'state'
+      Size = 50
+    end
+    object branchRegcountry: TWideStringField
+      DisplayLabel = 'Country'
+      FieldName = 'country'
+      Origin = 'country'
+      Size = 50
+    end
+    object branchRegzipCode: TWideStringField
+      DisplayLabel = 'Zip Code'
+      FieldName = 'zipCode'
+      Origin = '"zipCode"'
+      Size = 50
+    end
+  end
+  object dsBranchReg: TDataSource
+    DataSet = branchReg
+    Left = 899
+    Top = 272
+  end
+  object dsPriceReg: TDataSource
+    DataSet = priceReg
+    Left = 899
+    Top = 328
+  end
+  object priceReg: TFDTable
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'pricereg'
+    Left = 816
+    Top = 328
+    object priceRegbranchid: TIntegerField
+      DisplayLabel = 'Branch'
+      FieldName = 'branchid'
+      Origin = 'branchid'
+    end
+    object priceRegsupplierid: TIntegerField
+      DisplayLabel = 'Supplier'
+      FieldName = 'supplierid'
+      Origin = 'supplierid'
+    end
+    object priceRegproductid: TIntegerField
+      DisplayLabel = 'Product'
+      FieldName = 'productid'
+      Origin = 'productid'
+    end
+    object priceRegprice: TBCDField
+      DisplayLabel = 'Price'
+      FieldName = 'price'
+      Origin = 'price'
+      Precision = 12
+      Size = 2
+    end
+  end
+  object stockReg: TFDTable
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'stockreg'
+    Left = 816
+    Top = 384
+    object stockRegbranchid: TIntegerField
+      DisplayLabel = 'Branch'
+      FieldName = 'branchid'
+      Origin = 'branchid'
+    end
+    object stockRegsupplierid: TIntegerField
+      DisplayLabel = 'Supplier'
+      FieldName = 'supplierid'
+      Origin = 'supplierid'
+    end
+    object stockRegproductid: TIntegerField
+      DisplayLabel = 'Product'
+      FieldName = 'productid'
+      Origin = 'productid'
+    end
+    object stockRegquantity: TBCDField
+      DisplayLabel = 'Quantity'
+      FieldName = 'quantity'
+      Origin = 'quantity'
+      Precision = 12
+      Size = 2
+    end
+  end
+  object dsStockReg: TDataSource
+    DataSet = stockReg
+    Left = 899
+    Top = 384
+  end
+  object productReg: TFDTable
+    IndexFieldNames = 'id'
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'productreg'
+    Left = 816
+    Top = 160
+    object productRegid: TIntegerField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object productRegname: TWideStringField
+      FieldName = 'name'
+      Origin = 'name'
+      Size = 100
+    end
+    object productRegdescription: TWideStringField
+      FieldName = 'description'
+      Origin = 'description'
+      Size = 400
+    end
+  end
+  object dsProductReg: TDataSource
+    DataSet = productReg
+    Left = 899
+    Top = 160
+  end
+end

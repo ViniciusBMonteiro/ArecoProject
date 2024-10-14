@@ -1,0 +1,65 @@
+unit uTelaCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Grids,
+  Vcl.DBGrids, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
+  Vcl.Buttons, Vcl.DBCtrls, Vcl.ExtCtrls;
+
+type
+  TfrmCadastro = class(TForm)
+    grdRegister: TDBGrid;
+    Label1: TLabel;
+    productReg: TFDTable;
+    dsProductReg: TDataSource;
+    supplierReg: TFDTable;
+    dsSupplierReg: TDataSource;
+    branchReg: TFDTable;
+    dsBranchReg: TDataSource;
+    dsPriceReg: TDataSource;
+    priceReg: TFDTable;
+    IntegerField3: TIntegerField;
+    WideStringField7: TWideStringField;
+    WideStringField8: TWideStringField;
+    WideStringField9: TWideStringField;
+    SQLTimeStampField3: TSQLTimeStampField;
+    stockReg: TFDTable;
+    IntegerField4: TIntegerField;
+    WideStringField10: TWideStringField;
+    WideStringField11: TWideStringField;
+    WideStringField12: TWideStringField;
+    SQLTimeStampField4: TSQLTimeStampField;
+    dsStockReg: TDataSource;
+    productRegname: TWideStringField;
+    productRegdescription: TWideStringField;
+    supplierRegname: TWideStringField;
+    supplierRegaddress: TWideStringField;
+    supplierRegcomplement: TWideStringField;
+    supplierRegneighborhood: TWideStringField;
+    supplierRegcity: TWideStringField;
+    supplierRegstate: TWideStringField;
+    supplierRegcountry: TWideStringField;
+    supplierRegzipCode: TWideStringField;
+    Panel1: TPanel;
+    DBNavigator1: TDBNavigator;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCadastro: TfrmCadastro;
+
+implementation
+
+uses
+  uTelaPrincipal;
+
+{$R *.dfm}
+
+end.

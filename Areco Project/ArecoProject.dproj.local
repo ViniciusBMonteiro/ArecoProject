@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/10/11 08:23:25.000.249,=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/10/11 08:24:37.000.165,C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uTelaPrincipal.dfm</Transaction>
+    <Transaction>2024/10/11 08:24:37.000.165,C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uTelaPrincipal.pas</Transaction>
+    <Transaction>2024/10/11 08:24:42.000.620,C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\ERP_Arco.dproj</Transaction>
+    <Transaction>2024/10/11 21:42:01.000.904,=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\Unit1.pas</Transaction>
+    <Transaction>2024/10/11 21:42:14.000.629,C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uTelaCadastro.pas=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\Unit1.pas</Transaction>
+    <Transaction>2024/10/11 21:42:14.000.629,C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uTelaCadastro.dfm=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\Unit1.dfm</Transaction>
+    <Transaction>2024/10/11 22:46:54.000.626,C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uRegister.dfm=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uTelaCadastro.dfm</Transaction>
+    <Transaction>2024/10/11 22:46:54.000.626,C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uRegister.pas=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uTelaCadastro.pas</Transaction>
+    <Transaction>2024/10/11 22:47:03.000.414,C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uMain.dfm=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uTelaPrincipal.dfm</Transaction>
+    <Transaction>2024/10/11 22:47:03.000.414,C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uMain.pas=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uTelaPrincipal.pas</Transaction>
+    <Transaction>2024/10/12 09:44:38.000.600,=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\Unit1.pas</Transaction>
+    <Transaction>2024/10/12 09:45:03.000.536,C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\uDBConnection.pas=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\Unit1.pas</Transaction>
+    <Transaction>2024/10/14 07:50:53.924,C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\ArecoProject.dproj=C:\Users\vinic\OneDrive\Documentos\Embarcadero\Studio\Projects\ERP Arco\ERP_Arco.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
